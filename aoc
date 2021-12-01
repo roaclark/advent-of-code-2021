@@ -1,0 +1,21 @@
+#!/bin/bash
+
+case $1 in
+  make)
+    folder="src/day$2"
+    mkdir $folder
+    touch "${folder}/__init__.py"
+    cp solution.example.py "${folder}/solution_1.py"
+    cp solution.example.py "${folder}/solution_2.py"
+    cp test.example.py "${folder}/test_1.py"
+    cp test.example.py "${folder}/test_2.py"
+    ;;
+  test)
+    python3 -B -m unittest "src.day$2.test_$3"
+    ;;
+  run)
+    python3 -B -m "src.day$2.solution_$3"
+    ;;
+  *)
+    echo "Input command not recognized"
+esac
