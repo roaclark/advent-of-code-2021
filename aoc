@@ -10,6 +10,7 @@ case $1 in
     cp test.example.py "${folder}/test_1.py"
     cp test.example.py "${folder}/test_2.py"
     touch "${folder}/input.txt"
+    touch "${folder}/test_input.txt"
     ;;
   test)
     python3 -B -m unittest "src.day$2.test_$3"
