@@ -1,5 +1,6 @@
 import os
-from ..helpers.file_parsers import get_file_lines, add_vectors
+from ..helpers.file_parsers import get_file_lines
+from ..helpers.vector import add_vectors
 
 input_path = os.path.join(os.path.dirname(__file__), 'input.txt')
 
